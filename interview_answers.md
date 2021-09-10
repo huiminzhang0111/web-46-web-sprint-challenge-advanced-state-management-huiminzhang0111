@@ -13,4 +13,4 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
     "Reduc-thunk" allows you to wirte action creators that return a function instead of an action, The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives that store methods dispatch and getStore as parameters. 
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
-    My favorite would be Redux. It has centrailized state management system which is more efficient for developing large, complex applications with many components. whenever a component is updated, React re-renders all components inside that part of the component tree, so we don't need to render unnecessary components. 
+    My favorite would be Redux. It has centrailized state management system which is more efficient for developing large, complex applications with many components. whenever a component is updated, React re-renders all components inside that part of the component tree, so we don't need to render unnecessary components.  

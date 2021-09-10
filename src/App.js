@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { connect } from 'react-redux';
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
@@ -8,17 +8,19 @@ import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { fetchSmurfs } from "./actions";
+// import { fetchStart, fetchSuccess } from "./actions/index";
+import { fetchSmurfs } from "./actions/index";
 
-class App extends Component {
-  componentDidMount() {
-    fetchSmurfs()
+function App(props) {
+  useEffect(()=>{
+    props.fetchSmurfs() })
+  //   props.fetchStart()
   //   axios.get('http://localhost:3333/smurfs')
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log('Axios Error', err));
-  }
+  //     .then(res=>{
+  //       props.fetchSuccess(res.data)
+  //     }).catch(err=>{console.log(err)})
+  // },[])
 
-  render() {
     return (
       <div className="App">
         <Header />
@@ -30,7 +32,6 @@ class App extends Component {
       </div>
     );
   }
-}
 
 export default connect(null, {fetchSmurfs})(App);
 
