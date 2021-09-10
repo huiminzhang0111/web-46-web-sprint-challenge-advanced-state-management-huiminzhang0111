@@ -3,7 +3,7 @@ import Smurf from './Smurf';
 import { connect } from 'react-redux';
 
 const SmurfList = props=> {
-    console.log(props)
+
     const {smurfs, isLoading} = props;
 
     //const isLoading = false;

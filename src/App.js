@@ -13,7 +13,7 @@ import { fetchSmurfs } from "./actions/index";
 
 function App(props) {
   useEffect(()=>{
-    props.fetchSmurfs() })
+    props.fetchSmurfs()})
   //   props.fetchStart()
   //   axios.get('http://localhost:3333/smurfs')
   //     .then(res=>{
