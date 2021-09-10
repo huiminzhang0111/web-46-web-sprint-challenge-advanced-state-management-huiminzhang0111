@@ -11,7 +11,10 @@ export const fetchSmurfs = ()=>{
         dispatch(fetchStart())
         axios.get('http://localhost:3333/smurfs')
             .then(res => console.log(res))
-            .catch(err => console.log('Axios Error', err));
+            //.catch(err => console.log('Axios Error', err));
+            .catch(error=>{
+                dispatch(setError())
+            })
     }))
 }
 

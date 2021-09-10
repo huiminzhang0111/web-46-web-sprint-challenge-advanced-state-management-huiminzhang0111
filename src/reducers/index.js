@@ -33,11 +33,13 @@ const reducer = (state=initialState, action)=>{
             }
             return {
                 ...state,
+                isLoading: false,
                 smurfs: [...state.smurfs, newSmurf]
             }
         case SET_ERROR:
             return {
                 ...state,
+                isLoading: false,
                 error: action.payload
             }
         default: 
