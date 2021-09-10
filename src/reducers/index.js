@@ -27,9 +27,13 @@ const reducer = (state=initialState, action)=>{
                 error: "we got an error"
             }
         case ADD_SMURF:
+            const newSmurf = {
+                ...action.payload,
+                id: Date.now()
+            }
             return {
                 ...state,
-                smurfs: [...state.smurfs, action.payload]
+                smurfs: [...state.smurfs, newSmurf]
             }
         case SET_ERROR:
             return {
