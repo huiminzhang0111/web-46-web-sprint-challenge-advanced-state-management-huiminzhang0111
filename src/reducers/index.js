@@ -25,7 +25,7 @@ const reducer = (state=initialState, action)=>{
                 ...state,
                 isLoading: false,
                 smurfs: [],
-                errorMessage: action.payload
+                errorMessage: String(action.payload)
             }
         case ADD_NEW_SMURF:
             const newSmurf = {
@@ -41,7 +41,7 @@ const reducer = (state=initialState, action)=>{
             return {
                 ...state,
                 isLoading: false,
-                error: "whoops, error!"
+                errorMessage: "Name, position and nickname fields are required."
             }
         default: 
             return state;

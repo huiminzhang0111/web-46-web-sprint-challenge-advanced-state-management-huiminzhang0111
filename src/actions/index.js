@@ -1,4 +1,5 @@
 import axios from 'axios';
+//import { response } from 'msw/lib/types';
 
 export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
@@ -26,8 +27,8 @@ export const addSmurf = (newSmurf) => {
             .then(res =>{
                 dispatch({type: FETCH_SUCCESS, payload: res.data})
             })
-            .catch(errorMessage=>{
-                dispatch({type: FETCH_FAIL, payload: errorMessage})
+            .catch(error=>{
+                dispatch({type: FETCH_FAIL, payload: error.response.data.Error})
             })
     }))
 }
